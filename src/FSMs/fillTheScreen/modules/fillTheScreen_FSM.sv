@@ -15,6 +15,7 @@ module fillTheScreen_FSM (
   output [2:0] color;
 
   logic color_s, done, y_con_en, x_con_en;
+
   fillTheScreen_datapath data (
       .clk(clk),
       .rst_n(rst_n),

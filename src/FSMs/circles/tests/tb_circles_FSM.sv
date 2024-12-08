@@ -55,7 +55,7 @@ module tb_circles_FSM;
     end
 
     start_sig = 1;
-    r = 14;
+    r = 60;
 
     @(negedge clk);
 

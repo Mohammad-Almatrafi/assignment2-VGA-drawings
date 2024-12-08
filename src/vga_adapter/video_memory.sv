@@ -23,9 +23,8 @@ module video_memory #(
 
   logic [2:0] ram[0:19199];
 
-  always @(posedge clk_write, negedge resetn) begin
-    if (~resetn) foreach (ram[i]) ram[i] = 'b0;
-    else if (write_enable) ram[write_address] <= data_in;
+  always @(posedge clk_write) begin
+    if (write_enable) ram[write_address] <= data_in;
   end
 
   always @(*) begin
